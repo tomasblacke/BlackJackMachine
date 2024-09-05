@@ -25,6 +25,7 @@ function startGame(){
     dealerEl.textContent=" "
     dealerWin=false
     isAlive = true
+    hasBlackJack= false
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard , secondCard]

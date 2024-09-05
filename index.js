@@ -18,6 +18,7 @@ let dealerEl = document.getElementById("dealer-el")
 let dealerWin = true
 
 
+
 playerEl.textContent = player.name + ": $" + player.chips
 
 function startGame(){
@@ -26,6 +27,7 @@ function startGame(){
     dealerWin=false
     isAlive = true
     hasBlackJack= false
+
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
     cards = [firstCard , secondCard]
@@ -102,6 +104,7 @@ function stayOption(){
             dealerWin=false
         }
         dealerMessage(dealerWin)
+        isAlive=false//creo que con esto se arregla
     }
 }
 function dealerMessage(result){

@@ -2,7 +2,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     font-weight: bolder;
-    background: rgb(10, 83, 10);
+    background: url("resources/poker-cards-bg.png");
     color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -43,4 +43,7 @@ button:hover{
 }
 .hidden {
     display: none;
+}
+input{
+    border-radius: 5px;
 }

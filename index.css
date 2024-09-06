@@ -16,15 +16,23 @@
 /* Estilos para pantallas de celular */
 @media only screen and (max-width: 600px) {
     .body {
-        max-width: 100%; /* Haz que ocupe el 100% del ancho de la pantalla */
-        max-height: none; /* Elimina la restricción de altura */
-        padding: 10px; /* Ajusta los márgenes para evitar que queden muy pequeños */
+        max-width: 100%; /* Ocupa todo el ancho de la pantalla */
+        padding: 10px;
+        border-radius: 0; /* Quita los bordes redondeados para pantallas pequeñas */
+        border: none; /* Elimina los bordes */
     }
+
+    h2 {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+
+    p, #message-el {
+        font-size: 14px; /* Disminuye el tamaño de los textos */
+    }
+
     button {
         width: 100%; /* Botones a lo ancho de la pantalla */
-    }
-    p, h2 {
-        font-size: 14px; /* Ajusta el tamaño del texto */
+        font-size: 18px; /* Ajusta el tamaño de la fuente */
     }
 }
 h2{
@@ -51,6 +59,7 @@ button{
     padding-bottom: 5px;
     border:none;
     margin-bottom: 4px;
+    transition: all 0.3s ease; /* Añade una transición suave para botones */
 }
 button:hover{
     color: brown;

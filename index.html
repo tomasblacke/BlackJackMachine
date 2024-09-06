@@ -3,6 +3,7 @@
     <head>
         <title>BlackJack Game</title>
         <link rel="stylesheet" href="index.css">
+
     </head>
     <body>
         <div class="body">
@@ -26,9 +27,16 @@
                 <button id="stay-el" onclick="stayOption()">Stay</button>
                 <br>
                 <p id="dealer-el">Dealer Cards: </p>
+                
             </div>
             <p id="player-el">User:</p>
+            <div id="user-el"><!--Revisar-->
+                <p>Type your name: </p>
+                <input id="catch-el" type="text" placeholder="name">
+                <button id="set-username-el" onclick="setUsername()">Set Name</button>
+            </div>
         </div>
+        
         <script src="index.js"></script>
     </body>
 </html>

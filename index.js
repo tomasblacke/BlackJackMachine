@@ -1,6 +1,6 @@
 let player = {/*Hacemos el objeto jugador*/
 
-    name: "Tomas",
+    name: "player",
     chips: 200
 }
 
@@ -8,6 +8,7 @@ let cards =[]
 let sum = 0
 let hasBlackJack = false
 let isAlive = false
+let playerNameSet = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
@@ -16,8 +17,9 @@ let newCardEl = document.getElementById("newCard-el")
 let playerEl = document.getElementById("player-el")
 let dealerEl = document.getElementById("dealer-el")
 let dealerWin = true
-
-
+let userNameCatch = document.getElementById("catch-el")
+let userMenu= document.getElementById("usel-el")
+let playerNameDisplay = document.getElementById("player-name");
 
 playerEl.textContent = player.name + ": $" + player.chips
 
@@ -104,7 +106,7 @@ function stayOption(){
             dealerWin=false
         }
         dealerMessage(dealerWin)
-        isAlive=false//creo que con esto se arregla
+        isAlive=false//prevents continous stay
     }
 }
 function dealerMessage(result){
@@ -118,4 +120,14 @@ function dealerMessage(result){
         messageEl.textContent="You ´ve won $40"
     }
     playerEl.textContent = player.name + ": $" + player.chips
+}
+function setUsername(){
+    if(!playerNameSet){
+        player.name=userNameCatch.value
+        playerEl.textContent = player.name + ": $" + player.chips
+        
+    }else{
+        alert("You are already playing")
+    }
+    playerNameSet=true
 }

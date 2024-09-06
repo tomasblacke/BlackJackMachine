@@ -10,7 +10,7 @@
     border-radius: 10px;
     border: 2px solid black;
     max-width: 500px;
-    max-height: 500px;
+    max-height: 700px;
 
 }
 h2{
@@ -40,4 +40,7 @@ button{
 }
 button:hover{
     color: brown;
+}
+.hidden {
+    display: none;
 }

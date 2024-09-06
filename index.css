@@ -13,6 +13,20 @@
     max-height: 700px;
 
 }
+/* Estilos para pantallas de celular */
+@media only screen and (max-width: 600px) {
+    .body {
+        max-width: 100%; /* Haz que ocupe el 100% del ancho de la pantalla */
+        max-height: none; /* Elimina la restricción de altura */
+        padding: 10px; /* Ajusta los márgenes para evitar que queden muy pequeños */
+    }
+    button {
+        width: 100%; /* Botones a lo ancho de la pantalla */
+    }
+    p, h2 {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+}
 h2{
     color: goldenrod;
 }
@@ -47,3 +61,4 @@ button:hover{
 input{
     border-radius: 5px;
 }
+

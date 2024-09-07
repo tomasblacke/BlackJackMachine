@@ -29,6 +29,9 @@ function startGame(){
     dealerWin=false
     isAlive = true
     hasBlackJack= false
+    player.chips-=20
+    playerEl.textContent = player.name + ": $" + player.chips
+
 
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
@@ -60,15 +63,14 @@ function renderGame(){
         message ="Throw a new one"
         
     }else if(sum === 21){
-        message = "Black jack!You win $100"
+        message = "Black jack!You win $60"
         hasBlackJack=true
-        player.chips+=100
+        player.chips+=60
         playerEl.textContent = player.name + ": $" + player.chips
 
     }else {
         message = "Lose $20"
         isAlive = false
-        player.chips-=20
         playerEl.textContent = player.name + ": $" + player.chips
     }
     messageEl.textContent=message
@@ -112,7 +114,6 @@ function stayOption(){
 function dealerMessage(result){
     if(result){
         messageEl.textContent="You ´ve lost $20"
-        player.chips-=20
             
     }
     else{

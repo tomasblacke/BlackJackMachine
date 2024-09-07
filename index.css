@@ -69,5 +69,11 @@ button:hover{
 }
 input{
     border-radius: 5px;
+    height: 26px;
+    margin-bottom: 6px;
 }
-
+footer{
+    font-size: 10px;
+    color: rgb(4, 20, 4);
+    
+}

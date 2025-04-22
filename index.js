@@ -1,7 +1,7 @@
 let player = {/*Hacemos el objeto jugador*/
 
     name: "player",
-    chips: 200
+    chips: 40
 }
 
 let cards =[]
@@ -20,6 +20,12 @@ let dealerWin = true
 let userNameCatch = document.getElementById("catch-el")
 let userMenu= document.getElementById("usel-el")
 let playerNameDisplay = document.getElementById("player-name");
+
+
+let mesaEl = document.querySelector('.mesa');
+let restartEl=document.getElementById('restart-el');
+let startGameEl=document.getElementById('startGame');
+let stayGameEl=document.getElementById('stay-el');
 
 playerEl.textContent = player.name + ": $" + player.chips
 
@@ -63,7 +69,7 @@ function renderGame(){
         message ="Throw a new one"
         
     }else if(sum === 21){
-        message = "Black jack!You win $60"
+        message = "Black jack!You win $40"
         hasBlackJack=true
         player.chips+=60
         playerEl.textContent = player.name + ": $" + player.chips
@@ -114,11 +120,27 @@ function stayOption(){
 function dealerMessage(result){
     if(result){
         messageEl.textContent="You ´ve lost $20"
+        if(player.chips<=0){
+            /*Esto lo agregue nuevo*/ 
+            restartEl.hidden=false;
+
+            startGameEl.hidden=true;
+            newCardEl.hidden=true;
+            stayGameEl.hidden=true;
+
+            dealerEl.textContent = "";
+            sumEl.textContent = "";
+            cardEl.textContent = "";
+
+
+            messageEl.textContent+=". You are broke :("
+            isAlive=false;
+        }
             
     }
     else{
-        player.chips+=40
-        messageEl.textContent="You ´ve won $40"
+        player.chips+=20
+        messageEl.textContent="You ´ve won $20"
     }
     playerEl.textContent = player.name + ": $" + player.chips
 }
@@ -132,4 +154,14 @@ function setUsername(){
     }
     playerNameSet=true
 }
+function restart(){
+    restartEl.hidden= true;
+    player.chips=200;
+    startGameEl.hidden=false;
+    newCardEl.hidden=false;
+    stayGameEl.hidden=false;
+    playerEl.textContent = player.name + ": $" + player.chips
+    messageEl.textContent = "Let's Play!";
+    
 
+}

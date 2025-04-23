@@ -167,7 +167,7 @@ function restart(){
     playerEl.textContent = player.name + ": $" + player.chips
     messageEl.textContent = "Let's Play!";
     brokeEl.hidden=true;
-    userMenu.hidden=false;
+    /*userMenu.hidden=false;*/
 
 }
 

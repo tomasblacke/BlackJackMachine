@@ -18,7 +18,7 @@ let playerEl = document.getElementById("player-el")
 let dealerEl = document.getElementById("dealer-el")
 let dealerWin = true
 let userNameCatch = document.getElementById("catch-el")
-let userMenu= document.getElementById("usel-el")
+let userMenu= document.getElementById("user-el")
 let playerNameDisplay = document.getElementById("player-name");
 
 
@@ -26,6 +26,7 @@ let mesaEl = document.querySelector('.mesa');
 let restartEl=document.getElementById('restart-el');
 let startGameEl=document.getElementById('startGame');
 let stayGameEl=document.getElementById('stay-el');
+let brokeEl=document.getElementById('broke-el');
 
 playerEl.textContent = player.name + ": $" + player.chips
 
@@ -123,6 +124,7 @@ function dealerMessage(result){
         if(player.chips<=0){
             /*Esto lo agregue nuevo*/ 
             restartEl.hidden=false;
+            brokeEl.hidden=false;
 
             startGameEl.hidden=true;
             newCardEl.hidden=true;
@@ -148,6 +150,7 @@ function setUsername(){
     if(!playerNameSet){
         player.name=userNameCatch.value
         playerEl.textContent = player.name + ": $" + player.chips
+        userMenu.hidden=true;
         
     }else{
         alert("You are already playing")
@@ -162,6 +165,14 @@ function restart(){
     stayGameEl.hidden=false;
     playerEl.textContent = player.name + ": $" + player.chips
     messageEl.textContent = "Let's Play!";
-    
+    brokeEl.hidden=true;
+    userMenu.hidden=false;
 
+}
+
+/*SECCION AUDIO*/
+const audio = document.getElementById('myAudio');
+
+function toggleMute() {
+  audio.muted = !audio.muted;
 }

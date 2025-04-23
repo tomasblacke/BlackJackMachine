@@ -11,6 +11,7 @@
     border: 2px solid black;
     max-width: 500px;
     max-height: 700px;
+    min-height: 600px;
 
 }
 /* Estilos para pantallas de celular */
@@ -37,6 +38,11 @@
 }
 h2{
     color: goldenrod;
+}
+#broke-el{
+    color: goldenrod;
+    text-shadow: 0px 0px 2px black;
+    text-align: center;
 }
 #message-el{
     font-size: 20px;
@@ -76,4 +82,9 @@ footer{
     font-size: 10px;
     color: rgb(4, 20, 4);
     
+}
+#mute-btn{
+    border-radius: 50%;
+    font-size: 16px;
+    text-shadow: 0px 0px 1px black;
 }

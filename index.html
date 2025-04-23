@@ -29,6 +29,7 @@
                 <br>
                 <p id="dealer-el">Dealer Cards: </p>
                 <br>
+                <h3 id="broke-el" hidden>BROKE</h3>
                 <button id="restart-el" hidden onclick="restart()">Restart</button>
             </div>
             <p id="player-el">User:</p>
@@ -37,6 +38,13 @@
                 <input id="catch-el" type="text" placeholder="Name">
                 <button id="set-username-el" onclick="setUsername()">Set Name</button>
             </div>
+            <section id="audio">
+                <audio id="myAudio" loop autoplay muted>
+                    <source src="resources/Operator_AdobeStock_331468427_preview.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                  </audio>  
+                  <button id="mute-btn" onclick="toggleMute()">Mute / Unmute</button>
+            </section>
             <footer>₢ Tomas Black</footer>
         </div>
         <script src="index.js"></script>

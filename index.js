@@ -177,7 +177,10 @@ const audio = document.getElementById('myAudio');
 function toggleMute() {
   audio.muted = !audio.muted;
 }
+let audioStarted = false;
 window.addEventListener("click", () => {
-    audio.muted = false;
-    audio.play();
+    if (!audioStarted) {
+      audio.play();
+      audioStarted = true;
+    }
   });

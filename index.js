@@ -31,6 +31,7 @@ let brokeEl=document.getElementById('broke-el');
 playerEl.textContent = player.name + ": $" + player.chips
 
 function startGame(){
+    console.log(audio.volume);
     cardEl.textContent=""
     dealerEl.textContent=" "
     dealerWin=false
